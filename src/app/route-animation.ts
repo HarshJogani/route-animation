@@ -1,7 +1,7 @@
 import { trigger, transition, style, query, group, animateChild, animate, keyframes } from "@angular/animations";
 
 export const fader =
-    trigger('routeAnimations', [
+    trigger('HarshName', [
         transition('*<=>*', [
             query(':enter, :leave', [
                 style({
@@ -29,7 +29,7 @@ export const fader =
 // Positioned
 
 export const slider =
-    trigger('routeAnimations', [
+    trigger('HarshName', [
         transition('* =>isLeft', slideTo('left')),
         transition('* =>isRight', slideTo('right')),
         transition('* =>isabo', slideTo('right')),
@@ -72,7 +72,7 @@ function slideTo(direction: any) {
 
 
 export const transform =
-    trigger('routeAnimations', [
+    trigger('HarshName', [
         transition('* => isLeft', translateTo({ x: -100, y: -100, rotate: -720 })),
         transition('* => isRight', translateTo({ x: 100, y: -100, rotate: 90 })),
         transition('isRight => *', translateTo({ x: -100, y: -100, rotate: 360 })),
@@ -107,7 +107,7 @@ function translateTo({ x = 100, y = 0, rotate = 0 }) {
 
 
 export const stepper =
-    trigger('routeAnimations', [
+    trigger('HarshName', [
         transition('* <=> *', [
             query(':enter, :leave', [
                 style({
@@ -119,16 +119,17 @@ export const stepper =
             group([
                 query(':enter', [
                     animate('2000ms ease', keyframes([
-                        style({ transform: 'scale(0) translateX(100%)', offset: 0 }),
-                        style({ transform: 'scale(0.5) translateX(25%)', offset: 0.3 }),
-                        style({ transform: 'scale(1) translateX(0%)', offset: 1 }),
+                        style({ transform: 'scale(0) translateX(100%) roatte(45deg) scale(0.1)', offset: 0 }),
+                        style({ transform: 'scale(0.5) translateX(25%) rotate(180deg) scale(0.4)', offset: 0.3 }),
+                        style({ transform: 'scale(0.5) translateX(25%) rotate(300deg) scale(0.8)', offset: 0.8 }),
+                        style({ transform: 'scale(1) translateX(0%) rotate(360deg) scale(1)', offset: 1 }),
                     ])),
                 ]),
                 query(':leave', [
-                    animate('2000ms ease', keyframes([
+                    animate('1000ms ease', keyframes([
                         style({ transform: 'scale(1)', offset: 0 }),
                         style({ transform: 'scale(0.5) translateX(-25%) rotate(0)', offset: 0.35 }),
-                        style({ opacity: 0, transform: 'translateX(50%) rotate(180deg) scale(4)', offset: 1 }),
+                        style({ opacity: 0, transform: 'translateX(-50%) rotate(90deg) scale(4)', offset: 1 }),
                     ])),
                 ])
             ]),
