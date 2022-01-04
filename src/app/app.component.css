@@ -1,0 +1,29 @@
+.navbar {
+  background-color: rgba(87, 87, 236, 0.973);
+  display: flex;
+}
+
+
+.navbar-menu {
+  width: 100%;
+  display: flex;
+  padding: 20px 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-item a,
+.navbar-brand a {
+  color: white;
+  font-size: 21px;
+  text-decoration: none;
+  padding: 10px 20px;
+  transition: 0.3s;
+}
+
+.navbar-item a:hover,
+.navbar-brand a:hover {
+  transform: scale(2,1);
+  background-color: white;
+  color: black;
+}
