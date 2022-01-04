@@ -118,7 +118,7 @@ export const stepper =
             ]),
             group([
                 query(':enter', [
-                    animate('2000ms ease', keyframes([
+                    animate('500ms ease', keyframes([
                         style({ transform: 'scale(0) translateX(100%) roatte(45deg) scale(0.1)', offset: 0 }),
                         style({ transform: 'scale(0.5) translateX(25%) rotate(180deg) scale(0.4)', offset: 0.3 }),
                         style({ transform: 'scale(0.5) translateX(25%) rotate(300deg) scale(0.8)', offset: 0.8 }),
